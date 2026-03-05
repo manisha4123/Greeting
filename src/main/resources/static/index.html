@@ -373,7 +373,7 @@
        CONFIGURATION
        Change BACKEND_URL if your backend runs on a different port.
     ============================================================= */
-    const BACKEND_URL = 'http://localhost:8080/api/greet';
+    const BACKEND_URL = 'https://manisha-greeting-backend.onrender.com/api/greet';
 
     /* =============================================================
        DOM ELEMENTS
@@ -568,7 +568,8 @@
         // Network error (e.g. backend not running)
         showError(
           'Could not connect to the backend. ' +
-          'Make sure your Spring Boot server is running on port 8080.'
+          'It might be waking up (it takes ~30 seconds on the free tier after inactivity). ' +
+          'Please try again in a moment!'
         );
         console.error('Fetch error:', err);
       } finally {
