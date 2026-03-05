@@ -10,7 +10,7 @@ RUN mvn clean package -DskipTests
 #
 # Package stage
 #
-FROM openjdk:17-jdk-slim
+FROM eclipse-temurin:17-jdk-jammy
 WORKDIR /usr/local/lib
 COPY --from=build /home/app/target/greeting-0.0.1-SNAPSHOT.jar app.jar
 EXPOSE 10000
